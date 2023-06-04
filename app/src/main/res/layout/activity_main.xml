@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tite_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A844C"
+        android:minHeight="?attr/actionBarSize"
+
+        app:title="Myapplication"
+        android:theme="?attr/actionBarTheme" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            >
+
+            <ImageButton
+                android:id="@+id/note_book_button"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:background="#F6F6F6"
+                android:scaleType="fitEnd"
+
+                android:src="@drawable/note_book" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/music_button"
+
+                android:src="@drawable/music"
+                android:background="#F6F6F6"
+
+              />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+</LinearLayout>

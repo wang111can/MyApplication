@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".music_box">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/music_box_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A844C"
+        app:title="音乐盒"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ListView
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="700dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingTop="0dp"
+        android:background="#FFFFFF"
+
+        >
+
+        <ImageButton
+            android:id="@+id/bar_img1"
+            android:layout_width="80dp"
+
+            android:layout_height="80dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
+            android:src="@drawable/blank" />
+
+        <ImageButton
+            android:id="@+id/bar_img2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="40dp"
+            android:background="#FFFFFF"
+
+            android:scaleType="fitXY"
+            android:src="@drawable/previous" />
+
+        <ImageButton
+            android:id="@+id/bar_img3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#FFFFFF"
+
+            android:scaleType="fitXY"
+            android:src="@drawable/stop" />
+
+        <ImageButton
+
+            android:id="@+id/bar_img4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#FFFFFF"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/next" />
+
+    </LinearLayout>
+
+</LinearLayout>
