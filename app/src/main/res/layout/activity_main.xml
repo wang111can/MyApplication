@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F6F6F6"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -51,11 +52,48 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="120dp"
+                android:text="记事本" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="120dp"
+
+                android:text="音乐盒" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+            <ImageButton
+                android:id="@+id/shake"
+                android:background="#F6F6F6"
+
+                android:layout_width="205dp"
+                android:layout_height="178dp"
+                android:scaleType="fitCenter"
+
+
+                app:srcCompat="@drawable/shake_shake" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal"
+                android:paddingTop="80dp"
+                android:text="摇一摇测好运" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"

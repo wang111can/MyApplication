@@ -18,20 +18,21 @@ public class MainActivity extends AppCompatActivity {
     androidx.appcompat.widget.Toolbar bar;
 
     public static boolean[] set_switch_check = new boolean[4]; // 记录 set 页面的 控制情况
-    ImageButton note_book_button, music_button;
+    ImageButton note_book_button, music_button, shake_button;
     public static Intent background_music;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        background_music = new Intent(this, background_music.class);
 
+
+        background_music = new Intent(this, background_music.class);
+        // 顶部导航栏
         bar = findViewById(R.id.tite_bar);
         bar.inflateMenu(R.menu.title_menu);
 
-        // list 栏
+        // list 栏 设置背景音乐 和查看 开发人员信息
         bar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -54,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // 图片 按钮
+        // 图片 按钮 记事本 音乐盒 摇一摇
         note_book_button = (ImageButton) findViewById(R.id.note_book_button);
         music_button = (ImageButton) findViewById(R.id.music_button);
-
+        shake_button = (ImageButton) findViewById(R.id.shake);
 
         // 给图片按钮 设置监听器 跳转到 note_book
         note_book_button.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        shake_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, shake_shake.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
